@@ -1,0 +1,136 @@
+@media screen and (max-width: 2000px) {
+    .frame {
+        display: flex;
+    }
+    section {
+        width: 50vw;
+        text-align: center;
+        background: #F5F5F5;
+        padding-top: 30px;
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-bottom: 80px;
+    }
+    .anotherSec {
+        background: #F8FBFF;
+    }
+    .headerSec {
+        display: flex;
+        justify-content: center;
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 47px;
+        color: #2E3A59;
+    }
+    .avatar {
+        display: flex;
+        height: 187px;
+    }
+    .avatarSmall {
+        display: flex;
+        align-self: flex-start;
+        height: 97px;
+    }
+    .blockSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 15px;
+        margin-bottom: 80px;
+    }
+    .signature {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-weight: 700;
+    }
+    .txtSig {
+        text-align: left;
+    }
+    .commaUp1 {
+        display: flex;
+        align-self: flex-start;
+        margin-top: 20px;
+    }
+    .commaUp2 {
+        height: 26px;
+    }
+    .commaDown1 {
+        display: flex;
+        justify-content: space-between;
+    }
+    .commaDown2 {
+        height: 26px;
+    }
+    .list {
+        text-align: start;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        padding: 0;
+    }
+    .liStyle {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        border-bottom: 1px solid #E7EBF0;
+        cursor: pointer;
+    }
+    .liStyle img {
+        height: 10.5px;
+    }
+    .marker {
+        height: 40px !important;
+    }
+    .textList {
+        flex-grow: 2;
+    }
+    .textList-active {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        flex-grow: 2;
+        color: #00C368;
+    }
+    .active {
+        height: 10.5px;
+        transform: rotate(0.5turn);
+        transition: 0.2s;
+    }
+    .accordion-toggle {
+        height: 0px;
+        font-size: 18px;
+        opacity: 0;
+        transition:  
+        opacity 0.3s ease-in-out,
+        height 0.3s 0.3s ease-in-out;
+    }
+    .accordion-toggle p {
+        margin: 0;
+        pointer-events: none;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .animated {
+        opacity: 1;
+        transition:  
+        height 0.3s ease-in-out,
+        opacity 0.3s 0.3s ease-in-out;
+    }
+    
+}
+@media screen and (max-width: 1200px) {
+
+}
+@media screen and (max-width: 992px) {
+    
+}
+@media screen and (max-width: 768px) {
+    
+}
+@media screen and (max-width: 576px) and (min-width: 320px) {
+    
+}
