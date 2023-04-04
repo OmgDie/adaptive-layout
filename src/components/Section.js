@@ -5,6 +5,11 @@ import Avatar from '../img/Avatar.svg';
 import commaUp from '../img/commaUp.svg';
 import quotes from '../img/quotes.svg';
 import Accordion from './Accordion';
+import first from '../img/first.svg';
+import second from '../img/second.svg';
+import third from '../img/third.svg';
+import fourth from '../img/fourth.svg';
+import fifth from '../img/fifth.svg';
 
 const Section = () => {
     return (
@@ -54,11 +59,11 @@ const Section = () => {
                     </p>
                 </div>
                 <ul className='list'>
-                    <Accordion img={require('../img/first.svg')}/>
-                    <Accordion img={require('../img/second.svg')}/>
-                    <Accordion img={require('../img/third.svg')}/>
-                    <Accordion img={require('../img/fourth.svg')}/>
-                    <Accordion img={require('../img/fifth.svg')}/>
+                    <Accordion img= {first}/>
+                    <Accordion img= {second}/>
+                    <Accordion img= {third}/>
+                    <Accordion img= {fourth}/>
+                    <Accordion img= {fifth}/>
                 </ul>
             </section>
         </div>
