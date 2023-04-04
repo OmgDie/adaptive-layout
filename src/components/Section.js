@@ -1,31 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import '../styles/Section.css';
 import { LoremIpsum } from 'react-lorem-ipsum';
 import Avatar from '../img/Avatar.svg';
 import commaUp from '../img/commaUp.svg';
 import quotes from '../img/quotes.svg';
-import first from '../img/first.svg';
-import second from '../img/second.svg';
-import third from '../img/third.svg';
-import fourth from '../img/fourth.svg';
-import fifth from '../img/fifth.svg';
-import arrow from '../img/arrow.svg';
+import Accordion from './Accordion';
 
 const Section = () => {
-    const [toggle, setToggle] = useState(false)
-    const [heightEl, setHeightEl] = useState();
-
-    const refHeight = useRef()
-
-    useEffect(() => {
-        setHeightEl(`${refHeight.current.scrollHeight}px`)
-    }, [])
-
-    const toggleState = () => {
-        setToggle(!toggle)
-    }
-
-
     return (
         <div className='frame'>
             <section>
@@ -41,13 +22,13 @@ const Section = () => {
                         <img className='commaUp2' src={commaUp} alt="CommaUp"/>
                         <img className='commaUp2' src={commaUp} alt="CommaUp"/>
                     </div>
-                        <div className='txtSig'>
-                            <LoremIpsum random={false} avgSentencesPerParagraph={12}/>
-                            <div className='commaDown1'>
-                                <p className='signature'>Jane Doe</p>
-                                <img className='commaDown2' src={quotes} alt="quotes"/>
-                            </div>
+                    <div className='txtSig'>
+                        <LoremIpsum random={false} avgSentencesPerParagraph={12}/>
+                        <div className='commaDown1'>
+                            <p className='signature'>Jane Doe</p>
+                            <img className='commaDown2' src={quotes} alt="quotes"/>
                         </div>
+                    </div>
                 </div>
                 <div className='blockSection'>
                     <div className='txtSig'>
@@ -73,48 +54,11 @@ const Section = () => {
                     </p>
                 </div>
                 <ul className='list'>
-                    <li className='liStyle'>
-                        <img className='marker' src={first} alt='stability'/>
-                        <p className='textList'>Lorem ipsum, dolor sit amet adipisicing elit.</p>
-                        <img className='arrow' src={arrow} alt='accordion'/>
-                    </li>
-                    <li className='liStyle'>
-                        <img className='marker' src={second} alt='LED'/>
-                        <p className='textList'>Lorem ipsum, dolor sit amet adipisicing elit.</p>
-                        <img className='arrow' src={arrow} alt='accordion'/>
-                    </li>
-                    <li className='liStyle' onClick={toggleState}>
-                        <img className='marker' src={third} alt='ligths off'/>
-                        <p className={toggle? 'textList-active' : 'textList'}>Lorem ipsum, dolor sit amet adipisicing elit.
-                            <div
-                            className={toggle ? "accordion-toggle animated" : "accordion-toggle"}
-                            style={{height: toggle ? `${heightEl}` : '0px'}}
-                            ref={refHeight}
-                            >
-                            <p>Laboriosam quas, aut consectetur animi autem aliquid consequuntur suscipit exercitationem laborum cupiditate magnam eaque quae delenit</p>
-                            </div>
-                        </p>
-                        <img className={toggle && "active"} src={arrow} alt='accordion'/>
-                    </li>
-                    <li className='liStyle' onClick={toggleState}>
-                        <img className='marker' src={fourth} alt='splitter'/>
-                        <p className={toggle? 'textList-active' : 'textList'}>Lorem ipsum, dolor sit amet adipisicing elit.
-                            <div
-                            className={toggle ? "accordion-toggle animated" : "accordion-toggle"}
-                            style={{height: toggle ? `${heightEl}` : '0px'}}
-                            ref={refHeight}
-                            >
-                            <p>Laboriosam quas, aut consectetur animi autem aliquid consequuntur suscipit exercitationem laborum cupiditate magnam eaque quae delenit</p>
-                            </div>
-                        </p>
-                        <img className={toggle && "active"} src={arrow} alt='accordion'/>
-                    </li>
-                    
-                    <li className='liStyle'>
-                        <img className='marker' src={fifth} alt='power off'/>
-                        <p className='textList'>Lorem ipsum, dolor sit amet adipisicing elit.</p>
-                        <img className='arrow' src={arrow} alt='accordion'/>
-                    </li>
+                    <Accordion img={require('../img/first.svg')}/>
+                    <Accordion img={require('../img/second.svg')}/>
+                    <Accordion img={require('../img/third.svg')}/>
+                    <Accordion img={require('../img/fourth.svg')}/>
+                    <Accordion img={require('../img/fifth.svg')}/>
                 </ul>
             </section>
         </div>
