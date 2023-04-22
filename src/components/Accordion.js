@@ -43,7 +43,7 @@ const Accordion = (props) => {
         <div>
             <li className='liStyle' ref={domNode} onClick={toggleState}>
                 <img className='marker' src= { props.img } alt='icons' />
-                <p className={toggle ? 'textList-active' : 'textList'}>Lorem ipsum, dolor sit amet adipisicing elit.
+                <div className={toggle ? 'textList-active' : 'textList'}>Lorem ipsum, dolor sit amet adipisicing elit.
                     <div
                     className={toggle ? "accordion-toggle animated" : "accordion-toggle"}
                     style={{height: toggle ? `${heightEl}` : '0px'}}
@@ -51,7 +51,7 @@ const Accordion = (props) => {
                     >
                     <p>Laboriosam quas, aut consectetur animi autem aliquid consequuntur suscipit exercitationem laborum cupiditate magnam eaque quae delenit</p>
                     </div>
-                </p>
+                </div>
                 <img className={toggle && "active"} src={arrow} alt='accordion'/>
             </li>
         </div>

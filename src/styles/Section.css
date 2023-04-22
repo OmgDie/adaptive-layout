@@ -87,12 +87,22 @@
     }
     .textList {
         flex-grow: 2;
+        font-family: 'Roboto', sans-serif;
+        color: #2E3A59;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
     }
     .textList-active {
         display: flex;
         flex-direction: column;
         gap: 15px;
         flex-grow: 2;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
         color: #00C368;
     }
     .active {
